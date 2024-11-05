@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Виртуальная среда
+venv/
+.path/
+
+# Логи
+*.log
+
+# Прочие временные файлы
+*.DS_Store
+*.env
+*.local
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Модули и зависимости
+*.egg-info/
+dist/
+build/
+
+# Исключения для IDE
+.vscode/
+.idea/
