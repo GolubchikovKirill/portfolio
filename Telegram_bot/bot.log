@@ -1,0 +1,17 @@
+# log.py
+
+import logging
+
+# Настройки логирования
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("app.log"),  # Логирование в файл
+        logging.StreamHandler()  # Логирование в консоль
+    ]
+)
+
+# Создание логгера
+log = logging.getLogger(__name__)  # Используем __name__ для уникальности логгера
+

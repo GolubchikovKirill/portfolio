@@ -1,0 +1,44 @@
+services:
+  feedback_bot:
+    image: feedback_bot:latest
+    container_name: feedback_tg_bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8000:8000"  # Убедитесь, что бот использует этот порт
+    environment:
+      - POSTGRES_DB=feedback_bot
+      - POSTGRES_HOST=postgres_container
+      - POSTGRES_PORT=5432
+    depends_on:
+      - postgres_container
+    command: ["sh", "-c", "/usr/local/bin/wait-for-postgres.sh postgres_container 5432 && python main.py"]
+    networks:
+      - feedback_net
+
+  postgres_container:
+    image: postgres:15
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_DB: feedback_bot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 24101968h68790hd
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - feedback_net
+
+volumes:
+  postgres_data:
+
+networks:
+  feedback_net:
+
+
+
+
