@@ -11,4 +11,4 @@ Telegram бот для сбора обратной связи от пользо�
 ## Установка
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/GolubchikovKirill/portfolio/feedback_TG_bot.git
+   git clone https://github.com/GolubchikovKirill/Portfolio-Resume.git
