@@ -1,5 +1,5 @@
 # Голубчиков Кирилл 
-[Email](mailto:iam@kgolubchikov.ru) | [GitHub](https://github.com/GolubchikovKirill/) | [Telegram](@Kirill_Golubchikov)
+[Email](mailto:iam@kgolubchikov.ru) | [GitHub](https://github.com/GolubchikovKirill/) | [Telegram](https://t.me/Kirill_Golubchikov)
 
 ---
 
